@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const ROTATION_RANGE = 32.5;
 const HALF_ROTATION_RANGE = 32.5 / 2;
 
-const Square = ({ image }) => {
+const Square = ({ image, imageALT, index, setHoveredIndex, hoveredIndex }) => {
   const ref = useRef(null);
 
   const [rotateX, setRotateX] = useState(0);
@@ -27,13 +27,19 @@ const Square = ({ image }) => {
     setRotateX(rX);
     setRotateY(rY);
 
-    console.log(rX, rY);
+    console.log(height);
   };
 
   const handleMouseLeave = () => {
     if (!ref.current) return;
     setRotateX(0);
     setRotateY(0);
+    setHoveredIndex(-1);
+  };
+
+  const handleMouseEnter = () => {
+    if (!ref.current) return;
+    setHoveredIndex(index);
   };
 
   return (
@@ -41,6 +47,7 @@ const Square = ({ image }) => {
       ref={ref}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      onMouseEnter={handleMouseEnter}
       style={{
         transformStyle: "preserve-3d",
       }}
@@ -49,7 +56,26 @@ const Square = ({ image }) => {
         rotateY,
       }}
     >
-      <img src={image} alt="Square" style={{ width: "100%", height: "100%" }} />
+      <div className="image-wrapper">
+        <img
+          className={
+            hoveredIndex === index || hoveredIndex === -1
+              ? "default"
+              : "alternative"
+          }
+          src={image}
+          alt="Square"
+        />
+        <img
+          className={
+            hoveredIndex !== index && hoveredIndex !== -1
+              ? "default"
+              : "alternative"
+          }
+          src={imageALT}
+          alt="Square"
+        />
+      </div>
     </motion.div>
   );
 };
