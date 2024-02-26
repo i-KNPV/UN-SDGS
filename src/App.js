@@ -1,5 +1,6 @@
-import React from "react";
+import { React } from "react";
 import Square from "./components/Square";
+import { motion } from "framer-motion";
 
 // Importing SDGS images
 import square1 from "./assets/SDGS/E-WEB-Goal-1.png";
@@ -47,7 +48,15 @@ function App() {
     <div className="container">
       <div className="gallery">
         {squarePaths.map((image, index) => (
-          <Square key={index} image={image} />
+          <motion.div
+            key={index}
+            className="square"
+            initial={{ opacity: 0, translateX: -50 }}
+            animate={{ opacity: 1, translateX: 0 }}
+            transition={{ duration: 0.25, delay: index * 0.05 }}
+          >
+            <Square key={index} image={image} />
+          </motion.div>
         ))}
       </div>
     </div>
