@@ -1,0 +1,32 @@
+.title {
+    font-size: 5em;
+    text-align: center;
+    font-family: "Helvetica";
+}
+
+.button{
+    text-decoration: none;
+    padding: 0.5em 1em 0.5 em 0.5em;
+    color:white;
+    background-color: black;
+    border-color: white;
+    font-family: Helvetica;
+}
+
+.date{
+    color:black,
+}
+
+#content {
+    font-family: "Helvetica";
+    padding-bottom: 1.5em;
+}
+
+h3{
+    font-family: "Helvetica";
+    padding-top: 0.10em;
+}
+
+.tracker{
+    box-shadow: '1px 2px 9px #F4AAB9';
+}
