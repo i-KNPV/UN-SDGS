@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Square from "./components/Square";
+import Navbar from "./components/Navbar";
+import ScrollingText from "./components/ScrollingText";
 import { motion } from "framer-motion";
 import {
   VerticalTimeline,
@@ -33,6 +35,10 @@ function App() {
   return (
     <>
       <div className="container">
+        <Navbar />
+
+        <ScrollingText />
+
         <div className="gallery">
           {squarePaths.map((image, index) => (
             <motion.div

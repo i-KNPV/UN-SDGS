@@ -26,8 +26,6 @@ const Square = ({ image, imageALT, index, setHoveredIndex, hoveredIndex }) => {
 
     setRotateX(rX);
     setRotateY(rY);
-
-    console.log(height);
   };
 
   const handleMouseLeave = () => {
@@ -50,6 +48,9 @@ const Square = ({ image, imageALT, index, setHoveredIndex, hoveredIndex }) => {
       onMouseEnter={handleMouseEnter}
       style={{
         transformStyle: "preserve-3d",
+        position: "relative",
+        width: "100%",
+        height: "100%"
       }}
       animate={{
         rotateX,
