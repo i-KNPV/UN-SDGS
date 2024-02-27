@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Square from "./components/Square";
 import Navbar from "./components/Navbar";
 import ScrollingText from "./components/ScrollingText";
+import Carousel from "./components/Carousel";
 import { motion } from "framer-motion";
 import {
   VerticalTimeline,
@@ -60,6 +61,8 @@ function App() {
           ))}
         </div>
       </div>
+
+      <Carousel />
 
       <h1 className="title">Progress Report</h1>
       <div className="progress">
