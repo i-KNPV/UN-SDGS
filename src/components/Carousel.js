@@ -1,9 +1,22 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
 const Carousel = () => {
-    const [page, setPage] = useState(1)
+    const [page, setPage] = useState(1);
+    const [svgs, setSvgs] = useState([]);
+
+    useEffect(() => {
+        const importSvgs = async () => {
+            try {
+                const svgs = (await import(`../assets/SDGS-TARGETS/GOAL_${page}_TARGETS_SVG`)).default;
+                setSvgs(svgs);
+            } catch (error) {
+                console.error(`Failed to load SVGs for page ${page}:`, error);
+            }
+        };
+        importSvgs();
+    }, [page]);
 
     const handlePrev = () => {
         if (page > 1) {setPage(page - 1);}    
@@ -45,6 +58,19 @@ const Carousel = () => {
             <div className="button-container">
                 <button onClick={handlePrev}><IoIosArrowRoundBack size="25px"/> PREV</button>
                 <button onClick={handleNext}>NEXT <IoIosArrowRoundForward size="25px"/></button>
+            </div>
+
+            <div className="content-container">
+                <div className="svg-container">
+                    {svgs.map((svg, index) => (
+                        <div className="item">
+                            <img key={index} src={svg} alt={`SVG ${index}`} />
+                        </div>
+                    ))}
+                </div>
+                <div className="read-more-button">
+                    <button>LEARN MORE</button>
+                </div>
             </div>
         </div>
     )
