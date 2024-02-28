@@ -186,6 +186,14 @@ body {
        1px 1px 0 #000;
 }
 
+.solid .title { 
+  position: absolute;
+  top: -130px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #545F71;
+}
+
 .solid .button-container {
   position: absolute;
   top: -70px;

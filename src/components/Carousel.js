@@ -55,6 +55,10 @@ const Carousel = () => {
                 {page}
             </div>
 
+            <div className="title">
+                <h3>TARGETS</h3>
+            </div>
+
             <div className="button-container">
                 <button onClick={handlePrev}><IoIosArrowRoundBack size="25px"/> PREV</button>
                 <button onClick={handleNext}>NEXT <IoIosArrowRoundForward size="25px"/></button>
