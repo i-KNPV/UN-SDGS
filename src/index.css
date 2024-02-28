@@ -21,6 +21,23 @@ body {
 
 :root {
   --bg-color: rgb(250, 250, 250);
+  --sgd1: #e5243b;
+  --sgd2: #DDA63A;
+  --sgd3: #4C9F38;
+  --sgd4: #C5192D;
+  --sgd5: #FF3A21;
+  --sgd6: #26BDE2;
+  --sgd7: #FCC30B;
+  --sgd8: #A21942;
+  --sgd9: #FD6925;
+  --sgd10: #DD1367;
+  --sgd11: #FD9D24;
+  --sgd12: #BF8B2E;
+  --sgd13: #3F7E44;
+  --sgd14: #0A97D9;
+  --sgd15: #56C02B;
+  --sgd16: #00689D;
+  --sgd17: #19486A;
 }
 
 /* CSS FOR NAVBAR */
@@ -158,7 +175,14 @@ body {
   overflow: visible;
   font-size: 24rem;
   font-weight: 700;
-  color: #634B4C;
+  color: black;
+  -webkit-text-fill-color: var(--bg-color);
+  text-shadow:
+       3px 3px 0 #000,
+       -1px -1px 0 #000,  
+       1px -1px 0 #000,
+       -1px 1px 0 #000,
+       1px 1px 0 #000;
 }
 
 .solid .button-container {
