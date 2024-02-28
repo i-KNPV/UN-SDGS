@@ -3,12 +3,16 @@ import Square from "./components/Square";
 import Navbar from "./components/Navbar";
 import ScrollingText from "./components/ScrollingText";
 import Carousel from "./components/Carousel";
+import Card from "./components/Card"
 import { motion } from "framer-motion";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import { ScrollMenu } from "react-horizontal-scrolling-menu";
+import "react-horizontal-scrolling-menu/dist/styles.css";
+import usePreventBodyScroll from "./components/usePreventBodyScroll";
 import "./App.css";
 
 function importAll(r) {
@@ -27,11 +31,32 @@ const imagesALT = importAll(
   require.context("./assets/SDGS-ALT/", false, /\.(png|jpe?g|svg)$/)
 );
 
+const resourceImages = importAll(
+  require.context("./assets/SDGS/", false, /\.(png|jpe?g|svg)$/)
+);
+
+const resourceImagesALT = importAll(
+  require.context("./assets/SDGS-ALT/", false, /\.(png|jpe?g|svg)$/)
+);
+
 const squarePaths = Object.values(images);
 const squarePathsALT = Object.values(imagesALT);
 
+const resourcePaths = Object.values(resourceImages);
+const resourcePathsALT = Object.values(resourceImagesALT);
+
+const elemPrefix = "test"
+const getId = index => `${elemPrefix}${index}`
+
+const getItems = () =>
+  Array(7)
+    .fill(0)
+    .map((_, ind) => ({ id: getId(ind) }))
+
 function App() {
   const [hoveredIndex, setHoveredIndex] = useState(-1);
+  const [items] = React.useState(getItems);
+  const { disableScroll, enableScroll } = usePreventBodyScroll();
 
   return (
     <>
@@ -204,9 +229,42 @@ function App() {
             <button className="button">Read more</button>
           </VerticalTimelineElement>
         </VerticalTimeline>
+        <div className="resources">
+          <div onMouseEnter={disableScroll} onMouseLeave={enableScroll}>
+            <ScrollMenu
+              onWheel={onWheel}
+            >
+              {items.map(({ id }) => (
+                <Card
+                  title={id}
+                  // NOTE: itemId is required for track items
+                  itemId={id}
+                  key={id}
+                />
+              ))}
+            </ScrollMenu>
+          </div>
+        </div>
       </div>
     </>
   );
 }
 
+// resources
+
 export default App;
+
+function onWheel(apiObj, ev) {
+  const isThouchpad = Math.abs(ev.deltaX) !== 0 || Math.abs(ev.deltaY) < 15
+
+  if (isThouchpad) {
+    ev.stopPropagation()
+    return
+  }
+
+  if (ev.deltaY < 0) {
+    apiObj.scrollNext()
+  } else if (ev.deltaY > 0) {
+    apiObj.scrollPrev()
+  }
+}
