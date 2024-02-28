@@ -276,12 +276,96 @@ body {
 /* CSS FOR FOOTER */
 
 .footer {
-  height: 300px;
+  height: 460px;
   background-color: #333333;
   margin-top: 20px;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.footer .tagline {
+.footer hr{
+  width: 95%;
+}
 
+.footer .top {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  display: flex;
+}
+
+.footer .top .tagline{
+  color: white;
+  font-weight: 800;
+  font-size: 3rem;
+  padding-left: 50px;
+}
+
+.footer .top .right {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-left: auto;
+  width: 400px;
+}
+
+.right ul{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style-type: none;
+}
+
+.right ul li {
+  width: 100px;
+  border: 3px solid white;
+  color: white;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.right .icons {
+  display: flex;
+  color: gray;
+  font-size: 3rem;
+  gap: 1rem;
+  margin-top: 30px;
+  margin-right: 70px;
+}
+
+.footer .bottom {
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 95%;
+  display: flex;
+  align-items: center;
+}
+
+.footer .bottom .logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer .bottom .logo img {
+  height: 60px;
+}
+
+.footer .bottom .links {
+  margin-left: auto;
+  margin-right: 20px;
+  display: flex;
+  gap: 1.3rem;
+}
+
+.footer .bottom .links a {
+  text-decoration: none;
+  color:white;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.footer .bottom .links a:hover {
+  color: gray;
 }
