@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Square from "./components/Square";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import ScrollingText from "./components/ScrollingText";
 import Carousel from "./components/Carousel";
 import { motion } from "framer-motion";
@@ -205,6 +206,8 @@ function App() {
           </VerticalTimelineElement>
         </VerticalTimeline>
       </div>
+
+      <Footer />
     </>
   );
 }

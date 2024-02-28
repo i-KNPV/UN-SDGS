@@ -58,6 +58,7 @@ body {
   margin-left: auto;
   display: flex;
   gap: 2rem;
+
 }
 
 .navbar .buttons button {
@@ -66,6 +67,11 @@ body {
   font-size: 1rem;
   font-weight: 300;
   cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.navbar .buttons button:hover {
+  font-weight: 700;
 }
 
 .navbar a {
@@ -213,6 +219,11 @@ body {
   background-color: var(--bg-color);
 }
 
+.solid .button-container button:hover{
+  background-color: black;
+  color: white;
+}
+
 .content-container {
   display: flex;
   flex-direction: column;
@@ -255,4 +266,22 @@ body {
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+
+.read-more-button button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* CSS FOR FOOTER */
+
+.footer {
+  height: 300px;
+  background-color: #333333;
+  margin-top: 20px;
+  padding: 1rem;
+}
+
+.footer .tagline {
+
 }
