@@ -1,4 +1,4 @@
-const Logo = ({ images, speed = 500 }) => {
+const Logo = ({ images, speed = 1000 }) => {
     return (
       <div className="inner">
         <div className="wrapper">

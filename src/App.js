@@ -45,15 +45,10 @@ const squarePaths = Object.values(images);
 const squarePathsALT = Object.values(imagesALT);
 
 const logos = [
-  "https://bsdph.org/wp-content/uploads/2020/06/EVENT-MANAGEMENT-L.A.-Ducut-and-Company.jpg",
-  "https://bsdph.org/wp-content/uploads/2020/06/FOUNDATION-Coca-Cola-Foundation-Philippines.png",
-  "https://bsdph.org/wp-content/uploads/2020/06/FOOD-Jollibee-Foods-Corporation.png",
-  "https://bsdph.org/wp-content/uploads/2020/06/FOOD-Mondelez-Philippines.png",
-  "https://bsdph.org/wp-content/uploads/2020/06/FOOD-Nestle%CC%81-Philippines-1.png",
-  "https://bsdph.org/wp-content/uploads/2020/06/FOOD-The-Cravings-Group.jpg",
-  "https://bsdph.org/wp-content/uploads/2020/06/HOLDING-COMPANY-Aboitiz-Equity-Ventures-1.png",
-  "https://bsdph.org/wp-content/uploads/2020/06/HOLDING-COMPANY-Ayala-Corporation-1.png",
-  "https://bsdph.org/wp-content/uploads/2020/06/HOLDING-COMPANY-Filinvest-Development-Corporation-1.png"
+  "https://1000logos.net/wp-content/uploads/2021/05/Coca-Cola-logo.png",
+  "https://1000logos.net/wp-content/uploads/2021/05/Jollibee-logo.png",
+  "https://1000logos.net/wp-content/uploads/2020/09/Mondelez-Logo.png",
+  "https://1000logos.net/wp-content/uploads/2017/03/Nestle-Logo-2015.png"
 ].map((image) => ({
   id: crypto.randomUUID(),
   image

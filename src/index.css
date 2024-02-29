@@ -387,7 +387,7 @@ body {
 }
 
 .right ul li {
-  width: 100px;
+  width: 120px;
   border: 3px solid white;
   color: white;
   font-weight: 600;
@@ -396,7 +396,7 @@ body {
 
 .right .icons {
   display: flex;
-  color: gray;
+  color: #808080;
   font-size: 3rem;
   gap: 1rem;
   margin-top: 30px;
@@ -451,20 +451,13 @@ body {
   opacity: 1;
 }
 
-/* .partner img {
-  width: 200px;
-  height: 200px;
-  padding: 0 15px;
-  object-fit: cover;
-} */
-
 .partner img:last-of-type {
   padding-left: 0;
 }
 
 .inner {
   position: relative;
-  width: 100%;
+  width: 200%;
   overflow: hidden;
   height: 15rem;
 }
