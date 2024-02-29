@@ -1,38 +1,82 @@
-import React from "react"
+import { motion, useTransform, useScroll } from "framer-motion";
+import { useRef } from "react";
 
-import { VisibilityContext } from "react-horizontal-scrolling-menu"
+const Example = () => {
+  return (
+      <HorizontalScrollCarousel />
+  );
+};
 
-export function Card({ title, itemId }) {
-  const visibility = React.useContext(VisibilityContext)
-  const isVisible = visibility.useIsVisible(itemId, true)
+const HorizontalScrollCarousel = () => {
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+  });
+
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-65%"]);
 
   return (
-    <div
-      role="button"
-      style={{
-        border: "1px solid",
-        display: "inline-block",
-        margin: "0 30px",
-        width: "360px",
-        userSelect: "none"
-      }}
-      tabIndex={0}
-      className="card"
-    >
-      <div>
-        <div>{title}</div>
-        <div style={{ backgroundColor: isVisible ? "transparent" : "gray" }}>
-          visible: {JSON.stringify(isVisible)}
-        </div>
+    <section ref={targetRef} className="relative h-[200vh]">
+      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+        <motion.div style={{ x }} className="flex gap-4">
+          {cards.map((card) => {
+            return <Card card={card} key={card.id} />;
+          })}
+        </motion.div>
       </div>
+    </section>
+  );
+};
+
+const Card = ({ card }) => {
+  return (
+    <div
+      key={card.id}
+      className="group relative h-[650px] w-[450px] overflow-hidden bg-neutral-200"
+    >
       <div
         style={{
-          backgroundColor: "bisque",
-          height: "200px"
+          backgroundImage: `url(${card.url})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
-      />
+        className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
+      ></div>
+      <div className="absolute inset-0 z-10 grid place-content-center">
+        <p className="bg-gradient-to-br from-white/5 to-white/0 p-8 text-4xl font-black uppercase text-black backdrop-blur-lg">
+          {card.title}
+        </p>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Card;
+export default Example;
+
+const cards = [
+  {
+    url: "https://sdgs.un.org/sites/default/files/2022-06/Screen%20Shot%202022-06-30%20at%209.38.35%20AM.png",
+    title: "2022 SDG7 TAG Policy Briefs",
+    id: 1,
+  },
+  {
+    url: "https://sdgs.un.org/sites/default/files/2022-06/Screen%20Shot%202022-06-30%20at%209.25.33%20AM.png",
+    title: "Tracking SDG7",
+    id: 2,
+  },
+  {
+    url: "https://sdgs.un.org/sites/default/files/2023-03/screen_shot_2023-03-16_at_6.26.38_pm_0.png",
+    title: "2030 Agenda For Sustainable Development",
+    id: 3,
+  },
+  {
+    url: "https://sdgs.un.org/sites/default/files/2023-03/screen_shot_2023-03-02_at_11.11.28_am_0.png",
+    title: "Sustainable Development Goal interactions through a climate lens",
+    id: 4,
+  },
+  {
+    url: "https://sdgs.un.org/sites/default/files/2023-09/un_climate_sdg_synergies_report-cover_1.png",
+    title: "Synergy Solutions for a World in Crisis",
+    id: 5,
+  }
+];

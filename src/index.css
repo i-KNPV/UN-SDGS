@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -268,7 +272,6 @@ body {
 }
   /* background-color: var(--bg-color); */
 
-
 .solid .button-container button:hover{
   background-color: black;
   color: white;
@@ -431,4 +434,42 @@ body {
 
 .show {
   opacity: 1;
+}
+
+/* .partner img {
+  width: 200px;
+  height: 200px;
+  padding: 0 15px;
+  object-fit: cover;
+} */
+
+.partner img:last-of-type {
+  padding-left: 0;
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 15rem;
+}
+
+.partner .wrapper {
+  position: relative;
+  display: flex;
+}
+
+section {
+  display: flex;
+  animation: swipe var(--speed) linear infinite backwards;
+}
+
+@keyframes swipe {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translate(-100%);
+  }
 }
