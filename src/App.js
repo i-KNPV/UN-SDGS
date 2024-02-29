@@ -4,16 +4,15 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollingText from "./components/ScrollingText";
 import Carousel from "./components/Carousel";
-import Card from "./components/Card";
+import Example from "./components/Card"
+import Logo from "./components/Logo"
 import { motion } from "framer-motion";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import "react-horizontal-scrolling-menu/dist/styles.css";
-import usePreventBodyScroll from "./components/usePreventBodyScroll";
 import "./App.css";
 import {
   FaGlobeAmericas,
@@ -41,32 +40,27 @@ const imagesALT = importAll(
   require.context("./assets/SDGS-ALT/", false, /\.(png|jpe?g|svg)$/)
 );
 
-const resourceImages = importAll(
-  require.context("./assets/SDGS/", false, /\.(png|jpe?g|svg)$/)
-);
-
-const resourceImagesALT = importAll(
-  require.context("./assets/SDGS-ALT/", false, /\.(png|jpe?g|svg)$/)
-);
 
 const squarePaths = Object.values(images);
 const squarePathsALT = Object.values(imagesALT);
 
-const resourcePaths = Object.values(resourceImages);
-const resourcePathsALT = Object.values(resourceImagesALT);
-
-const elemPrefix = "test";
-const getId = (index) => `${elemPrefix}${index}`;
-
-const getItems = () =>
-  Array(7)
-    .fill(0)
-    .map((_, ind) => ({ id: getId(ind) }));
+const logos = [
+  "https://bsdph.org/wp-content/uploads/2020/06/EVENT-MANAGEMENT-L.A.-Ducut-and-Company.jpg",
+  "https://bsdph.org/wp-content/uploads/2020/06/FOUNDATION-Coca-Cola-Foundation-Philippines.png",
+  "https://bsdph.org/wp-content/uploads/2020/06/FOOD-Jollibee-Foods-Corporation.png",
+  "https://bsdph.org/wp-content/uploads/2020/06/FOOD-Mondelez-Philippines.png",
+  "https://bsdph.org/wp-content/uploads/2020/06/FOOD-Nestle%CC%81-Philippines-1.png",
+  "https://bsdph.org/wp-content/uploads/2020/06/FOOD-The-Cravings-Group.jpg",
+  "https://bsdph.org/wp-content/uploads/2020/06/HOLDING-COMPANY-Aboitiz-Equity-Ventures-1.png",
+  "https://bsdph.org/wp-content/uploads/2020/06/HOLDING-COMPANY-Ayala-Corporation-1.png",
+  "https://bsdph.org/wp-content/uploads/2020/06/HOLDING-COMPANY-Filinvest-Development-Corporation-1.png"
+].map((image) => ({
+  id: crypto.randomUUID(),
+  image
+}));
 
 function App() {
   const [hoveredIndex, setHoveredIndex] = useState(-1);
-  const [items] = React.useState(getItems);
-  const { disableScroll, enableScroll } = usePreventBodyScroll();
 
   return (
     <>
@@ -357,23 +351,15 @@ function App() {
           </div>
         </div>
       </div>
-
-      {/*resources*/}
-      <div className="resources">
-        <div onMouseEnter={disableScroll} onMouseLeave={enableScroll}>
-          <ScrollMenu onWheel={onWheel}>
-            {items.map(({ id }) => (
-              <Card
-                title={id}
-                // NOTE: itemId is required for track items
-                itemId={id}
-                key={id}
-              />
-            ))}
-          </ScrollMenu>
-        </div>
-      </div>
-
+       {/* resources */}        
+    <div className="resources">
+    <h1 className="title">Resources</h1>
+        <Example />
+    </div>
+    <div className="partner">
+    <h1 className="subtitle">Partnered Organizations</h1>
+    <Logo images={logos} speed={5000} />
+    </div>
       <Footer />
     </>
   );
