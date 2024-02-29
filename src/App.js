@@ -147,22 +147,6 @@ function App() {
 
           </VerticalTimelineElement>
         </VerticalTimeline>
-        <div className="resources">
-          <div onMouseEnter={disableScroll} onMouseLeave={enableScroll}>
-            <ScrollMenu
-              onWheel={onWheel}
-            >
-              {items.map(({ id }) => (
-                <Card
-                  title={id}
-                  // NOTE: itemId is required for track items
-                  itemId={id}
-                  key={id}
-                />
-              ))}
-            </ScrollMenu>
-          </div>
-        </div>
       </div>
 
       {/*Development Report*/}
@@ -268,6 +252,24 @@ function App() {
             </p>
         </div>
       </div>
+      
+    // resources
+      <div className="resources">
+          <div onMouseEnter={disableScroll} onMouseLeave={enableScroll}>
+            <ScrollMenu
+              onWheel={onWheel}
+            >
+              {items.map(({ id }) => (
+                <Card
+                  title={id}
+                  // NOTE: itemId is required for track items
+                  itemId={id}
+                  key={id}
+                />
+              ))}
+            </ScrollMenu>
+          </div>
+        </div>
         
       </div>
 
@@ -275,8 +277,6 @@ function App() {
     </>
   );
 }
-
-// resources
 
 export default App;
 

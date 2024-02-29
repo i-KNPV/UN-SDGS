@@ -229,7 +229,7 @@ body {
   scrollbar-width: none; /* Firefox */
 }
   background-color: var(--bg-color);
-}
+
 
 .solid .button-container button:hover{
   background-color: black;
