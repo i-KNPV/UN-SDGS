@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Square from "./components/Square";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import ScrollingText from "./components/ScrollingText";
 import Carousel from "./components/Carousel";
 import Card from "./components/Card"
@@ -14,6 +15,7 @@ import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import "react-horizontal-scrolling-menu/dist/styles.css";
 import usePreventBodyScroll from "./components/usePreventBodyScroll";
 import "./App.css";
+
 
 function importAll(r) {
   let images = {};
@@ -89,8 +91,8 @@ function App() {
 
       <Carousel />
 
-      <h1 className="title">Progress Report</h1>
-      <div className="progress">
+      <h1 className="title">History</h1>
+      <div className="history">
         <VerticalTimeline lineColor="#000">
           <VerticalTimelineElement
             className="tracker"
@@ -98,7 +100,8 @@ function App() {
             date="2016"
             dateClassName="date"
           >
-            <h3 className="report-title">SDG Progress Report 2016</h3>
+            <img src = {require("./assets/images/pic2.jpg")} alt = "development2" className="history-image"></img>
+            <h3 className="history-title">SDG Progress Report 2016</h3>
             <p id="content">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
               velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
@@ -107,15 +110,15 @@ function App() {
               Proin tincidunt ligula at lacinia malesuada. Mauris vehicula nibh
               non efficitur dignissim. h
             </p>
-            <button className="button">Read more</button>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="tracker"
             iconStyle={{ background: "#808080", color: "#fff" }}
             date="2017"
             dateClassName="date"
-          >
-            <h3 className="report-title">SDG Progress Report 2017</h3>
+          > 
+            <img src = {require("./assets/images/pic2.jpg")} alt = "development2" className="history-image"></img>
+            <h3 className="history-title">SDG Progress Report 2017</h3>
             <p id="content">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
               velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
@@ -124,15 +127,15 @@ function App() {
               Proin tincidunt ligula at lacinia malesuada. Mauris vehicula nibh
               non efficitur dignissim. h
             </p>
-            <button className="button">Read more</button>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="tracker"
             iconStyle={{ background: "#808080", color: "#fff" }}
             date="2018"
             dateClassName="date"
-          >
-            <h3 className="report-title">SDG Progress Report 2018</h3>
+          > 
+            <img src = {require("./assets/images/pic2.jpg")} alt = "development2" className="history-image"></img>
+            <h3 className="history-title">SDG Progress Report 2018</h3>
             <p id="content">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
               velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
@@ -141,92 +144,7 @@ function App() {
               Proin tincidunt ligula at lacinia malesuada. Mauris vehicula nibh
               non efficitur dignissim. h
             </p>
-            <button className="button">Read more</button>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="tracker"
-            iconStyle={{ background: "#808080", color: "#fff" }}
-            date="2019"
-            dateClassName="date"
-          >
-            <h3 className="report-title">SDG Progress Report 2019</h3>
-            <p id="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
-              velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
-              tristique laoreet.
-              <br />
-              Proin tincidunt ligula at lacinia malesuada. Mauris vehicula nibh
-              non efficitur dignissim. h
-            </p>
-            <button className="button">Read more</button>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="tracker"
-            iconStyle={{ background: "#808080", color: "#fff" }}
-            date="2020"
-            dateClassName="date"
-          >
-            <h3 className="report-title">SDG Progress Report 2020</h3>
-            <p id="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
-              velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
-              tristique laoreet.
-              <br />
-              Proin tincidunt ligula at lacinia malesuada. Mauris vehicula nibh
-              non efficitur dignissim. h
-            </p>
-            <button className="button">Read more</button>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="tracker"
-            iconStyle={{ background: "#808080", color: "#fff" }}
-            date="2021"
-            dateClassName="date"
-          >
-            <h3 className="report-title">SDG Progress Report 2021</h3>
-            <p id="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
-              velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
-              tristique laoreet.
-              <br />
-              Proin tincidunt ligula at lacinia malesuada. Mauris vehicula nibh
-              non efficitur dignissim. h
-            </p>
-            <button className="button">Read more</button>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="tracker"
-            iconStyle={{ background: "#808080", color: "#fff" }}
-            date="2022"
-            dateClassName="date"
-          >
-            <h3 className="report-title">SDG Progress Report 2022</h3>
-            <p id="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
-              velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
-              tristique laoreet.
-              <br />
-              Proin tincidunt ligula at lacinia malesuada. Mauris vehicula nibh
-              non efficitur dignissim. h
-            </p>
-            <button className="button">Read more</button>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="tracker"
-            iconStyle={{ background: "#808080", color: "#fff" }}
-            date="2023"
-            dateClassName="date"
-          >
-            <h3 className="report-title">SDG Progress Report 2023</h3>
-            <p id="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
-              velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
-              tristique laoreet.
-              <br />
-              Proin tincidunt ligula at lacinia malesuada. Mauris vehicula nibh
-              non efficitur dignissim. h
-            </p>
-            <button className="button">Read more</button>
+
           </VerticalTimelineElement>
         </VerticalTimeline>
         <div className="resources">
@@ -246,6 +164,114 @@ function App() {
           </div>
         </div>
       </div>
+
+      {/*Development Report*/}
+      <h1 className="title">Development Reports</h1>
+      <div className="development-report">
+          
+          <div className="report">
+            <div className= "card">
+            <img src = {require("./assets/images/pic1.jpg")} alt = "development1" className="card-image"></img>
+            <h1 className="card-title"> Card Title </h1>
+              <p className="card-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
+                velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
+                tristique laoreet.
+              </p>
+              <button className="card-button"> Learn More </button>
+            </div>
+            </div>
+        
+
+        <div className="report1">
+        <div className= "card">
+          <img src = {require("./assets/images/pic2.jpg")} alt = "development2" className="card-image"></img>
+            <h1 className="card-title"> Card Title </h1>
+              <p className="card-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
+                velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
+                tristique laoreet.
+              </p>
+              <button className="card-button"> Learn More </button>
+          </div>
+        </div>
+        </div>
+
+        
+      {/*Progress Report*/}
+      <h1 className="title">Progress Reports</h1>
+      <div className="set-one">
+          
+        <div className="progress">
+          <div className= "card">
+          <h1 className="card-title"> Card Title </h1>
+            <p className="card-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
+              velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
+              tristique laoreet.
+            </p>
+          </div>
+          </div>
+      
+      <div className="progress-1">
+      <div className= "card">
+          <h1 className="card-title"> Card Title </h1>
+            <p className="card-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
+              velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
+              tristique laoreet.
+            </p>
+        </div>
+      </div>
+      
+      <div className="progress-2">
+      <div className= "card">
+          <h1 className="card-title"> Card Title </h1>
+            <p className="card-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
+              velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
+              tristique laoreet.
+            </p>
+        </div>
+      </div>
+      </div>
+      
+      <div className="set-two">
+          <div className="progress">
+            <div className= "card">
+            <h1 className="card-title"> Card Title </h1>
+              <p className="card-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
+                velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
+                tristique laoreet.
+              </p>
+            </div>
+            </div>
+        
+        <div className="progress-1">
+        <div className= "card">
+            <h1 className="card-title"> Card Title </h1>
+              <p className="card-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
+                velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
+                tristique laoreet.
+              </p>
+          </div>
+        </div>
+      <div className="progress-2">
+      <div className= "card">
+          <h1 className="card-title"> Card Title </h1>
+            <p className="card-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
+              velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
+              tristique laoreet.
+            </p>
+        </div>
+      </div>
+        
+      </div>
+
+      <Footer />
     </>
   );
 }

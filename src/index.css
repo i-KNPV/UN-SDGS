@@ -21,6 +21,23 @@ body {
 
 :root {
   --bg-color: rgb(250, 250, 250);
+  --sgd1: #e5243b;
+  --sgd2: #DDA63A;
+  --sgd3: #4C9F38;
+  --sgd4: #C5192D;
+  --sgd5: #FF3A21;
+  --sgd6: #26BDE2;
+  --sgd7: #FCC30B;
+  --sgd8: #A21942;
+  --sgd9: #FD6925;
+  --sgd10: #DD1367;
+  --sgd11: #FD9D24;
+  --sgd12: #BF8B2E;
+  --sgd13: #3F7E44;
+  --sgd14: #0A97D9;
+  --sgd15: #56C02B;
+  --sgd16: #00689D;
+  --sgd17: #19486A;
 }
 
 /* CSS FOR NAVBAR */
@@ -41,6 +58,7 @@ body {
   margin-left: auto;
   display: flex;
   gap: 2rem;
+
 }
 
 .navbar .buttons button {
@@ -49,6 +67,11 @@ body {
   font-size: 1rem;
   font-weight: 300;
   cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.navbar .buttons button:hover {
+  font-weight: 700;
 }
 
 .navbar a {
@@ -147,28 +170,44 @@ body {
   margin-top: 300px;
   margin-bottom: 100px;
   background-color: #D9D9D9;
-  height: 300px;
+  height: auto;
+  padding-top: 2rem;
   position: relative;
 }
 
 .solid .overflow-number {
   position: absolute;
-  top: -100%;
+  top: -300px;
   left: 2.5%;
   overflow: visible;
   font-size: 24rem;
   font-weight: 700;
-  color: #634B4C;
+  color: black;
+  -webkit-text-fill-color: var(--bg-color);
+  text-shadow:
+       3px 3px 0 #545F71,
+       -1px -1px 0 #545F71,  
+       1px -1px 0 #545F71,
+       -1px 1px 0 #545F71,
+       1px 1px 0 #545F71;
+}
+
+.solid .title { 
+  position: absolute;
+  top: -130px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #545F71;
 }
 
 .solid .button-container {
   position: absolute;
-  top: -25%;
+  top: -70px;
   right: 2.5%;
   display: flex;
 }
 
-.solid .button-container button {
+.solid .button-container button{
   font-size: 1.2rem;
   border: 1px solid gray;
   border-radius: 1rem;
@@ -188,4 +227,157 @@ body {
 .react-horizontal-scrolling-menu--scroll-container {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+  background-color: var(--bg-color);
+}
+
+.solid .button-container button:hover{
+  background-color: black;
+  color: white;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.solid .svg-container {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.svg-container .item {
+  max-height: 100%;
+}
+
+.svg-container .item img {
+  width: 90%;
+}
+
+.read-more-button {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.read-more-button button {
+  font-size: 1.2rem;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  border-radius: 1rem;
+  margin: 5px;
+  padding: .5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.read-more-button button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* CSS FOR FOOTER */
+
+.footer {
+  height: 460px;
+  background-color: #333333;
+  margin-top: 20px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer hr{
+  width: 95%;
+}
+
+.footer .top {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  display: flex;
+}
+
+.footer .top .tagline{
+  color: white;
+  font-weight: 800;
+  font-size: 3rem;
+  padding-left: 50px;
+}
+
+.footer .top .right {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-left: auto;
+  width: 400px;
+}
+
+.right ul{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style-type: none;
+}
+
+.right ul li {
+  width: 100px;
+  border: 3px solid white;
+  color: white;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.right .icons {
+  display: flex;
+  color: gray;
+  font-size: 3rem;
+  gap: 1rem;
+  margin-top: 30px;
+  margin-right: 70px;
+}
+
+.footer .bottom {
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 95%;
+  display: flex;
+  align-items: center;
+}
+
+.footer .bottom .logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer .bottom .logo img {
+  height: 60px;
+}
+
+.footer .bottom .links {
+  margin-left: auto;
+  margin-right: 20px;
+  display: flex;
+  gap: 1.3rem;
+}
+
+.footer .bottom .links a {
+  text-decoration: none;
+  color:white;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.footer .bottom .links a:hover {
+  color: gray;
 }

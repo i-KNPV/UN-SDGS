@@ -1,17 +1,11 @@
 .title {
+    margin-top: 20px;
     font-size: 5em;
     text-align: center;
     font-family: "Helvetica";
+    color: black;
 }
 
-.button{
-    text-decoration: none;
-    padding: 0.5em 1em 0.5 em 0.5em;
-    color:white;
-    background-color: black;
-    border-color: white;
-    font-family: Helvetica;
-}
 
 .date{
     color:black,
@@ -19,7 +13,6 @@
 
 #content {
     font-family: "Helvetica";
-    padding-bottom: 1.5em;
 }
 
 h3{
@@ -30,3 +23,158 @@ h3{
 .tracker{
     box-shadow: '1px 2px 9px #F4AAB9';
 }
+
+.history-title {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.history-image{
+    width:100%;
+}
+.set-one{
+    margin-top: 40px;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 1px;
+}
+
+
+.set-two{
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 1px;
+}
+
+.progress {
+    width: 15rem;
+    box-shadow: 0px 10px 8px #999;
+    background-color: white;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px;  
+}
+
+
+.progress-1{
+    width: 15rem;
+    box-shadow: 0px 10px 8px #999;
+    background-color: white;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: -350px;
+    border-radius: 10px;
+}
+
+
+.progress-2 {
+    width: 15rem;
+    box-shadow: 0px 10px 8px #999;
+    background-color: white;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: -350px;
+    border-radius: 10px;
+}
+
+.progress:hover,.progress-1:hover,.progress-2:hover{
+    transform: scale(1,1);
+    background-color: black;
+    color: white;
+    transition-delay: 0.3s; 
+}
+
+
+
+
+.development-report{
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: -40px;
+}
+
+.report{
+    margin-top: 20px;
+    width: 20%;
+    box-shadow: 0px 10px 8px #999;
+    background-color: white;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 75px;
+
+}
+
+.report1{
+    margin-top: 20px;
+    width: 20%;
+    box-shadow: 0px 10px 8px #999;
+    background-color: white;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: -350px;
+
+}
+.card-title{
+    margin-top: 10px;
+    margin-left: 13px;
+    font-family: Helvetica;
+}
+
+.card-description{
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.card-button{
+    margin-left: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0.5 rem;
+    border-radius: 1rem;
+    height: 25px;
+    width: 200px;
+    font-family: Helvetica;
+    background-color: white;
+}
+
+.card-button:hover{
+    transform: scale(1,1);
+    background-color: black;
+    color: white;
+}
+
+.card-image{
+    width: 100%;
+    height: 250px;
+}
+
+
