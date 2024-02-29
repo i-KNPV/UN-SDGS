@@ -174,11 +174,10 @@ function App() {
             dateClassName="date"
           >
             <img
-              src={require("./assets/images/pic2.jpg")}
+              src={require("./assets/images/pic7.jpg")}
               alt="development2"
               className="history-image"
             ></img>
-            <h3 className="history-title">SDG Progress Report 2018</h3>
             <p id="content">
               In January 2015, the General Assembly began the negotiation
               process on the post-2015 development agenda. 2015 was a landmark
@@ -211,7 +210,7 @@ function App() {
       {/*Development Report*/}
       <h1 className="title">Development Reports</h1>
       <div className="development-report">
-        <div className="report">
+        <div className="report" id="report1">
           <div className="report-card">
             <img
               src={require("./assets/images/pic1.jpg")}
@@ -234,10 +233,10 @@ function App() {
           </div>
         </div>
 
-        <div className="report1">
+        <div className="report" id="report2">
           <div className="report-card">
             <img
-              src={require("./assets/images/pic2.jpg")}
+              src={require("./assets/images/pic2.jpeg")}
               alt="development2"
               className="card-image"
             ></img>

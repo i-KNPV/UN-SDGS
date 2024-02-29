@@ -133,30 +133,19 @@ h3{
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    border-style: solid;
+    border-color: #808080;
+    align-self: normal;
+}
+
+
+#report1{
     margin-left: 75px;
-    border-style: solid;
-    border-color: #808080;
-    align-self: normal;
 }
 
-
-
-.report1{
-    margin-top: 20px;
-    width: 20%;
-    height: auto;
-    background-color: white;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+#report2{
     margin-left: -350px;
-    border-style: solid;
-    border-color: #808080;
-    align-self: normal;
 }
-
 .report-card{
     align-self: normal;
 }
@@ -207,10 +196,8 @@ h3{
 
 
 .card:hover{
-    transform: scale(1.05);
     background-color: black;
     color: white;
-    transition-delay: 0.3s; 
     border-radius: 10px;
     align-self: normal;
 }
