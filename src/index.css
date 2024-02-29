@@ -392,6 +392,7 @@ body {
   color: white;
   font-weight: 600;
   padding: 1rem;
+  cursor: pointer;
 }
 
 .right .icons {
@@ -401,6 +402,7 @@ body {
   gap: 1rem;
   margin-top: 30px;
   margin-right: 70px;
+  cursor: pointer;
 }
 
 .footer .bottom {
@@ -418,6 +420,7 @@ body {
 
 .footer .bottom .logo img {
   height: 60px;
+  cursor: pointer;
 }
 
 .footer .bottom .links {
@@ -432,6 +435,7 @@ body {
   color:white;
   font-weight: 300;
   letter-spacing: 2px;
+  cursor: pointer;
 }
 
 .footer .bottom .links a:hover {
