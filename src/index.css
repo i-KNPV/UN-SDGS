@@ -381,3 +381,7 @@ body {
 .footer .bottom .links a:hover {
   color: gray;
 }
+
+.set-two {
+  overflow: hidden;
+}
