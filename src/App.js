@@ -58,31 +58,29 @@ function App() {
 
   return (
     <>
-      <div className="container w-full">
-        <Navbar />
+      <Navbar />
 
-        <ScrollingText />
+      <ScrollingText />
 
-        <div className="gallery">
-          {squarePaths.map((image, index) => (
-            <motion.div
+      <div className="gallery">
+        {squarePaths.map((image, index) => (
+          <motion.div
+            key={index}
+            className="square"
+            initial={{ opacity: 0, translateX: -50 }}
+            animate={{ opacity: 1, translateX: 0 }}
+            transition={{ duration: 0.25, delay: index * 0.05 }}
+          >
+            <Square
               key={index}
-              className="square"
-              initial={{ opacity: 0, translateX: -50 }}
-              animate={{ opacity: 1, translateX: 0 }}
-              transition={{ duration: 0.25, delay: index * 0.05 }}
-            >
-              <Square
-                key={index}
-                image={image}
-                imageALT={squarePathsALT[index]}
-                index={index}
-                setHoveredIndex={setHoveredIndex}
-                hoveredIndex={hoveredIndex}
-              />
-            </motion.div>
-          ))}
-        </div>
+              image={image}
+              imageALT={squarePathsALT[index]}
+              index={index}
+              setHoveredIndex={setHoveredIndex}
+              hoveredIndex={hoveredIndex}
+            />
+          </motion.div>
+        ))}
       </div>
 
       <Carousel />

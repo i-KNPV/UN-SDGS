@@ -114,10 +114,11 @@ const Carousel = () => {
       </div>
       <div className="button-container">
         <button onClick={handlePrev}>
-          <IoIosArrowRoundBack size="25px" /> PREV
+          <IoIosArrowRoundBack size="25px" />
+          <span>PREV</span> 
         </button>
         <button onClick={handleNext}>
-          NEXT <IoIosArrowRoundForward size="25px" />
+          <span>NEXT</span>  <IoIosArrowRoundForward size="25px" />
         </button>
       </div>
       <div className="content-container">
