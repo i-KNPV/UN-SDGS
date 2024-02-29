@@ -2,25 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'NimbusSanL';
+  src: url('./assets/fonts/NimbusSanL-Bol.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NimbusSanL';
+  src: url('./assets/fonts/NimbusSanL-BolIta.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'NimbusSanL';
+  src: url('./assets/fonts/NimbusSanL-Reg.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NimbusSanL';
+  src: url('./assets/fonts/NimbusSanL-RegIta.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
 * {
   margin: 0;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: NimbusSanL, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
 body {
   background-color: var(--bg-color);
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  overflow-x: hidden;
 }
 
 :root {
@@ -51,6 +70,13 @@ body {
   width: 80vw;
   height: 80px;
   display: flex;
+  align-items: center;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -183,11 +209,11 @@ body {
 .square .cursor-square {
   display: inline-block;
   position: absolute;
-  width: 200px;
+  width: 250px;
   height: auto;
   border-radius: 1rem;
   z-index: 9999;
-  transform: translateY(-120%);
+  transform: translateY(-105%);
   padding: 20px;
 }
 
@@ -201,8 +227,19 @@ body {
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
+.cursor-square h2 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
 .cursor-square h5 {
-  margin-top: 20px;
+  font-family: NimbulSansL;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.cursor-square p {
+  font-size: 1rem;
 }
 
 /* CSS FOR CAROUSEL */
@@ -219,7 +256,7 @@ body {
 
 .solid .overflow-number {
   position: absolute;
-  top: -300px;
+  top: -320px;
   left: 0;
   overflow: visible;
   font-size: 24rem;
@@ -250,6 +287,7 @@ body {
   color: #545F71;
   opacity: 0;
   transition: all 1s;
+  font-weight: 900;
 }
 
 .solid .title.show {
@@ -344,7 +382,7 @@ body {
 /* CSS FOR FOOTER */
 
 .footer {
-  height: 460px;
+  height: 500px;
   background-color: #333333;
   margin-top: 20px;
   padding: 1rem;
@@ -366,9 +404,10 @@ body {
 
 .footer .top .tagline{
   color: white;
+  width: auto;
   font-weight: 800;
   font-size: 3rem;
-  padding-left: 50px;
+  padding-left: 60px;
 }
 
 .footer .top .right {
@@ -387,11 +426,11 @@ body {
 }
 
 .right ul li {
-  width: 120px;
+  width: 140px;
   border: 3px solid white;
   color: white;
   font-weight: 600;
-  padding: 1rem;
+  padding: .8rem;
   cursor: pointer;
 }
 
@@ -401,13 +440,14 @@ body {
   font-size: 3rem;
   gap: 1rem;
   margin-top: 30px;
-  margin-right: 70px;
+  margin-right: 100px;
   cursor: pointer;
 }
 
 .footer .bottom {
   margin-top: 20px;
   margin-left: 20px;
+  padding: .5rem;
   width: 95%;
   display: flex;
   align-items: center;
@@ -469,6 +509,12 @@ body {
 .partner .wrapper {
   position: relative;
   display: flex;
+}
+
+h1.title {
+  color: #545F71;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 section {

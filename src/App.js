@@ -4,8 +4,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollingText from "./components/ScrollingText";
 import Carousel from "./components/Carousel";
-import Example from "./components/Card"
-import Logo from "./components/Logo"
+import Example from "./components/Card";
+import Logo from "./components/Logo";
 import { motion } from "framer-motion";
 import {
   VerticalTimeline,
@@ -40,7 +40,6 @@ const imagesALT = importAll(
   require.context("./assets/SDGS-ALT/", false, /\.(png|jpe?g|svg)$/)
 );
 
-
 const squarePaths = Object.values(images);
 const squarePathsALT = Object.values(imagesALT);
 
@@ -48,10 +47,10 @@ const logos = [
   "https://1000logos.net/wp-content/uploads/2021/05/Coca-Cola-logo.png",
   "https://1000logos.net/wp-content/uploads/2021/05/Jollibee-logo.png",
   "https://1000logos.net/wp-content/uploads/2020/09/Mondelez-Logo.png",
-  "https://1000logos.net/wp-content/uploads/2017/03/Nestle-Logo-2015.png"
+  "https://1000logos.net/wp-content/uploads/2017/03/Nestle-Logo-2015.png",
 ].map((image) => ({
   id: crypto.randomUUID(),
-  image
+  image,
 }));
 
 function App() {
@@ -59,7 +58,7 @@ function App() {
 
   return (
     <>
-      <div className="container">
+      <div className="container w-full">
         <Navbar />
 
         <ScrollingText />
@@ -346,15 +345,15 @@ function App() {
           </div>
         </div>
       </div>
-       {/* resources */}        
-    <div className="resources">
-    <h1 className="title">Resources</h1>
+      {/* resources */}
+      <div className="resources">
+        <h1 className="title">Resources</h1>
         <Example />
-    </div>
-    <div className="partner">
-    <h1 className="subtitle">Partnered Organizations</h1>
-    <Logo images={logos} speed={5000} />
-    </div>
+      </div>
+      <div className="partner">
+        <h1 className="title">Partnered Organizations</h1>
+        <Logo images={logos} speed={5000} />
+      </div>
       <Footer />
     </>
   );
