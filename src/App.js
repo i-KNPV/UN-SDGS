@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollingText from "./components/ScrollingText";
 import Carousel from "./components/Carousel";
-import Card from "./components/Card"
+import Card from "./components/Card";
 import { motion } from "framer-motion";
 import {
   VerticalTimeline,
@@ -15,7 +15,6 @@ import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import "react-horizontal-scrolling-menu/dist/styles.css";
 import usePreventBodyScroll from "./components/usePreventBodyScroll";
 import "./App.css";
-
 
 function importAll(r) {
   let images = {};
@@ -47,13 +46,13 @@ const squarePathsALT = Object.values(imagesALT);
 const resourcePaths = Object.values(resourceImages);
 const resourcePathsALT = Object.values(resourceImagesALT);
 
-const elemPrefix = "test"
-const getId = index => `${elemPrefix}${index}`
+const elemPrefix = "test";
+const getId = (index) => `${elemPrefix}${index}`;
 
 const getItems = () =>
   Array(7)
     .fill(0)
-    .map((_, ind) => ({ id: getId(ind) }))
+    .map((_, ind) => ({ id: getId(ind) }));
 
 function App() {
   const [hoveredIndex, setHoveredIndex] = useState(-1);
@@ -100,7 +99,11 @@ function App() {
             date="2016"
             dateClassName="date"
           >
-            <img src = {require("./assets/images/pic2.jpg")} alt = "development2" className="history-image"></img>
+            <img
+              src={require("./assets/images/pic2.jpg")}
+              alt="development2"
+              className="history-image"
+            ></img>
             <h3 className="history-title">SDG Progress Report 2016</h3>
             <p id="content">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
@@ -116,8 +119,12 @@ function App() {
             iconStyle={{ background: "#808080", color: "#fff" }}
             date="2017"
             dateClassName="date"
-          > 
-            <img src = {require("./assets/images/pic2.jpg")} alt = "development2" className="history-image"></img>
+          >
+            <img
+              src={require("./assets/images/pic2.jpg")}
+              alt="development2"
+              className="history-image"
+            ></img>
             <h3 className="history-title">SDG Progress Report 2017</h3>
             <p id="content">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
@@ -133,8 +140,12 @@ function App() {
             iconStyle={{ background: "#808080", color: "#fff" }}
             date="2018"
             dateClassName="date"
-          > 
-            <img src = {require("./assets/images/pic2.jpg")} alt = "development2" className="history-image"></img>
+          >
+            <img
+              src={require("./assets/images/pic2.jpg")}
+              alt="development2"
+              className="history-image"
+            ></img>
             <h3 className="history-title">SDG Progress Report 2018</h3>
             <p id="content">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
@@ -144,7 +155,6 @@ function App() {
               Proin tincidunt ligula at lacinia malesuada. Mauris vehicula nibh
               non efficitur dignissim. h
             </p>
-
           </VerticalTimelineElement>
         </VerticalTimeline>
       </div>
@@ -152,113 +162,113 @@ function App() {
       {/*Development Report*/}
       <h1 className="title">Development Reports</h1>
       <div className="development-report">
-          
-          <div className="report">
-            <div className= "card">
-            <img src = {require("./assets/images/pic1.jpg")} alt = "development1" className="card-image"></img>
+        <div className="report">
+          <div className="card">
+            <img
+              src={require("./assets/images/pic1.jpg")}
+              alt="development1"
+              className="card-image"
+            ></img>
             <h1 className="card-title"> Card Title </h1>
-              <p className="card-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
-                velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
-                tristique laoreet.
-              </p>
-              <button className="card-button"> Learn More </button>
-            </div>
-            </div>
-        
-
-        <div className="report1">
-        <div className= "card">
-          <img src = {require("./assets/images/pic2.jpg")} alt = "development2" className="card-image"></img>
-            <h1 className="card-title"> Card Title </h1>
-              <p className="card-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
-                velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
-                tristique laoreet.
-              </p>
-              <button className="card-button"> Learn More </button>
+            <p className="card-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
+              velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
+              tristique laoreet.
+            </p>
+            <button className="card-button"> Learn More </button>
           </div>
         </div>
-        </div>
 
-        
+        <div className="report1">
+          <div className="card">
+            <img
+              src={require("./assets/images/pic2.jpg")}
+              alt="development2"
+              className="card-image"
+            ></img>
+            <h1 className="card-title"> Card Title </h1>
+            <p className="card-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
+              velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
+              tristique laoreet.
+            </p>
+            <button className="card-button"> Learn More </button>
+          </div>
+        </div>
+      </div>
+
       {/*Progress Report*/}
       <h1 className="title">Progress Reports</h1>
       <div className="set-one">
-          
         <div className="progress">
-          <div className= "card">
-          <h1 className="card-title"> Card Title </h1>
-            <p className="card-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
-              velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
-              tristique laoreet.
-            </p>
-          </div>
-          </div>
-      
-      <div className="progress-1">
-      <div className= "card">
-          <h1 className="card-title"> Card Title </h1>
-            <p className="card-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
-              velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
-              tristique laoreet.
-            </p>
-        </div>
-      </div>
-      
-      <div className="progress-2">
-      <div className= "card">
-          <h1 className="card-title"> Card Title </h1>
-            <p className="card-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
-              velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
-              tristique laoreet.
-            </p>
-        </div>
-      </div>
-      </div>
-      
-      <div className="set-two">
-          <div className="progress">
-            <div className= "card">
+          <div className="card">
             <h1 className="card-title"> Card Title </h1>
-              <p className="card-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
-                velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
-                tristique laoreet.
-              </p>
-            </div>
-            </div>
-        
+            <p className="card-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
+              velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
+              tristique laoreet.
+            </p>
+          </div>
+        </div>
+
         <div className="progress-1">
-        <div className= "card">
+          <div className="card">
             <h1 className="card-title"> Card Title </h1>
-              <p className="card-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
-                velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
-                tristique laoreet.
-              </p>
-          </div>
-        </div>
-      <div className="progress-2">
-      <div className= "card">
-          <h1 className="card-title"> Card Title </h1>
             <p className="card-description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
               velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
               tristique laoreet.
             </p>
+          </div>
+        </div>
+
+        <div className="progress-2">
+          <div className="card">
+            <h1 className="card-title"> Card Title </h1>
+            <p className="card-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
+              velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
+              tristique laoreet.
+            </p>
+          </div>
         </div>
       </div>
-      
-    // resources
-      <div className="resources">
+
+      <div className="set-two">
+        <div className="progress">
+          <div className="card">
+            <h1 className="card-title"> Card Title </h1>
+            <p className="card-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
+              velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
+              tristique laoreet.
+            </p>
+          </div>
+        </div>
+        <div className="progress-1">
+          <div className="card">
+            <h1 className="card-title"> Card Title </h1>
+            <p className="card-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
+              velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
+              tristique laoreet.
+            </p>
+          </div>
+        </div>
+        <div className="progress-2">
+          <div className="card">
+            <h1 className="card-title"> Card Title </h1>
+            <p className="card-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id
+              velit ex. Etiam in pellentesque eros. Proin blandit faucibus dolor
+              tristique laoreet.
+            </p>
+          </div>
+        </div>
+        // resources
+        <div className="resources">
           <div onMouseEnter={disableScroll} onMouseLeave={enableScroll}>
-            <ScrollMenu
-              onWheel={onWheel}
-            >
+            <ScrollMenu onWheel={onWheel}>
               {items.map(({ id }) => (
                 <Card
                   title={id}
@@ -270,7 +280,6 @@ function App() {
             </ScrollMenu>
           </div>
         </div>
-        
       </div>
 
       <Footer />
@@ -281,16 +290,16 @@ function App() {
 export default App;
 
 function onWheel(apiObj, ev) {
-  const isThouchpad = Math.abs(ev.deltaX) !== 0 || Math.abs(ev.deltaY) < 15
+  const isThouchpad = Math.abs(ev.deltaX) !== 0 || Math.abs(ev.deltaY) < 15;
 
   if (isThouchpad) {
-    ev.stopPropagation()
-    return
+    ev.stopPropagation();
+    return;
   }
 
   if (ev.deltaY < 0) {
-    apiObj.scrollNext()
+    apiObj.scrollNext();
   } else if (ev.deltaY > 0) {
-    apiObj.scrollPrev()
+    apiObj.scrollPrev();
   }
 }

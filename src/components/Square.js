@@ -9,6 +9,11 @@ const Square = ({ image, imageALT, index, setHoveredIndex, hoveredIndex }) => {
 
   const [rotateX, setRotateX] = useState(0);
   const [rotateY, setRotateY] = useState(0);
+  const [showCursorSquare, setShowCursorSquare] = useState(false);
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const cursorSquare = document.createElement("div");
+  cursorSquare.classList.add("cursor-square");
+  document.body.appendChild(cursorSquare);
 
   const handleMouseMove = (e) => {
     if (!ref.current) return;
@@ -26,6 +31,7 @@ const Square = ({ image, imageALT, index, setHoveredIndex, hoveredIndex }) => {
 
     setRotateX(rX);
     setRotateY(rY);
+    setCursorPosition({ x: width * 3, y: height + 250 });
   };
 
   const handleMouseLeave = () => {
@@ -33,11 +39,13 @@ const Square = ({ image, imageALT, index, setHoveredIndex, hoveredIndex }) => {
     setRotateX(0);
     setRotateY(0);
     setHoveredIndex(-1);
+    setShowCursorSquare(false);
   };
 
   const handleMouseEnter = () => {
     if (!ref.current) return;
     setHoveredIndex(index);
+    setShowCursorSquare(true);
   };
 
   return (
@@ -50,7 +58,7 @@ const Square = ({ image, imageALT, index, setHoveredIndex, hoveredIndex }) => {
         transformStyle: "preserve-3d",
         position: "relative",
         width: "100%",
-        height: "100%"
+        height: "100%",
       }}
       animate={{
         rotateX,
@@ -77,6 +85,14 @@ const Square = ({ image, imageALT, index, setHoveredIndex, hoveredIndex }) => {
           alt="Square"
         />
       </div>
+      {showCursorSquare && (
+        <div
+          className="cursor-square"
+          style={{ left: cursorPosition.x - 300, top: cursorPosition.y - 250 }}
+        >
+          <h2>{hoveredIndex + 1}</h2>
+        </div>
+      )}
     </motion.div>
   );
 };
