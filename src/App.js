@@ -9,6 +9,8 @@ import Logo from "./components/Logo";
 import Header from "./components/Header";
 import HistoryCard from "./components/HistoryCard";
 import historyData from "./components/HistoryContent";
+import progressData from "./components/ProgressContent";
+import ProgressCard from "./components/ProgressCard";
 
 import { motion } from "framer-motion";
 
@@ -102,146 +104,21 @@ function App() {
 
       <Header
         title="PROGRESS REPORTS"
-        description="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
+        description="Every year, the UN Secretary General presents an annual SDG Progress report, which is developed in cooperation with the UN System."
       />
 
-      {/*Development Report*/}
-      {/* <h1 className="title">Development Reports</h1>
-      <div className="development-report">
-        <div className="report" id="report1">
-          <div className="report-card">
-            <img
-              src={require("./assets/images/pic1.jpg")}
-              alt="development1"
-              className="card-image"
-            ></img>
-            <h3 className="report-card-title">
-              {" "}
-              Sustainable Development Report 2019{" "}
-            </h3>
-
-            <p className="card-description">
-              The Future is Now: Science for Achieving Sustainable Development,
-              is the first Global Sustainable Development Report prepared by the
-              Independent Group of Scientists appointed by the United Nations
-              Secretary-General.
-            </p>
-
-            <button className="card-button"> Learn More </button>
-          </div>
-        </div>
-
-        <div className="report" id="report2">
-          <div className="report-card">
-            <img
-              src={require("./assets/images/pic2.jpeg")}
-              alt="development2"
-              className="card-image"
-            ></img>
-            <h3 className="report-card-title">
-              {" "}
-              Sustainable Development Report 2023
-            </h3>
-            <p className="card-description">
-              The GSDR 2023, "Times of Crisis, Times of Change: Science for
-              Accelerating Transformations to Sustainable Development"
-              highlights key transformations needed in different sectors and
-              tools for progress towards the SDGs.
-            </p>
-            <button className="card-button"> Learn More </button>
-          </div>
-        </div>
-      </div> */}
-
-      {/*Progress Report*/}
-      {/* <h1 className="title">Progress Reports</h1>
-      <div className="set-one">
-        <div className="progress">
-          <div className="card">
-            <h1 className="card-title">
-              {" "}
-              2018 <FaExternalLinkSquareAlt />
-            </h1>
-            <p className="card-description">
-              The report shows that, in some areas, progress is insufficient to
-              meet the Agenda’s goals and targets by 2030. This is especially
-              true for the most disadvantaged and marginalized groups...
-            </p>
-          </div>
-        </div>
-
-        <div className="progress-1">
-          <div className="card">
-            <h1 className="card-title">
-              {" "}
-              2019 <FaExternalLinkSquareAlt />{" "}
-            </h1>
-            <p className="card-description">
-              The report demonstrates that progress is being made in some
-              critical areas, and that some favorable trends are evident.
-              Extreme poverty has declined considerably...
-            </p>
-          </div>
-        </div>
-
-        <div className="progress-2">
-          <div className="card">
-            <h1 className="card-title">
-              {" "}
-              2020 <FaExternalLinkSquareAlt />{" "}
-            </h1>
-            <p className="card-description">
-              The Sustainable Development Goals Report 2020 brings together the
-              latest data to show us that, before the COVID-19 pandemic,
-              progress remained uneven and we were not on track to meet the
-              Goals by 2030...
-            </p>
-          </div>
-        </div>
+      <div className="progress">
+        {progressData.map((progressData) => (
+          <ProgressCard
+            image={progressData.image}
+            title={progressData.title}
+            date = {progressData.date}
+            author = {progressData.author}
+            description={progressData.description}
+          />
+        ))}
       </div>
 
-      <div className="set-two">
-        <div className="progress">
-          <div className="card">
-            <h1 className="card-title">
-              {" "}
-              2021 <FaExternalLinkSquareAlt />
-            </h1>
-            <p className="card-description">
-              Progress had been made in poverty reduction, maternal and child
-              health, access to electricity, and gender equality, but not enough
-              to achieve the Goals by 2030...
-            </p>
-          </div>
-        </div>
-
-        <div className="progress-1">
-          <div className="card">
-            <h1 className="card-title">
-              {" "}
-              2022 <FaExternalLinkSquareAlt />
-            </h1>
-            <p className="card-description">
-              The Sustainable Development Goals Report 2022 racks the global and
-              regional progress towards the 17 Goals with in-depth analyses of
-              selected indicators for each Goal...
-            </p>
-          </div>
-        </div>
-        <div className="progress-2">
-          <div className="card">
-            <h1 className="card-title">
-              {" "}
-              2023 <FaExternalLinkSquareAlt />
-            </h1>
-            <p className="card-description">
-              The Sustainable Development Goals Report 2023: Special Edition
-              provides a powerful call to action, presenting a candid assessment
-              of the SDGs based on the latest data and estimates...
-            </p>
-          </div>
-        </div>
-      </div> */}
       {/* resources */}
       <div className="resources">
         <h1 className="title">Resources</h1>

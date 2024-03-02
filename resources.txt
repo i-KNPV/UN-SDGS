@@ -1,26 +1,38 @@
 Navbar component
 https://ui.shadcn.com/docs/components/navigation-menu
 
-Images can be found in the following links:
-https://www.un.org/en/conferences/environment/rio1992
-https://www.un.org/en/conferences/environment/newyork2000
-https://sustainabledevelopment.un.org/rio20
-https://sustainabledevelopment.un.org/post2015/owg
-https://www.un.org/youthenvoy/2015/02/youthnow-2015-year-opportunity-youth/
-https://www.flickr.com/photos/51178866@N04/7421246458
-https://pexels.com/photo/a-boy-in-dirty-clothing-with-a-bucket-15517285/
-https://www.pexels.com/photo/group-of-people-holding-arms-461049/
+Images can be found here:
 
+https://images.pexels.com/photos/15517285/pexels-photo-15517285/free-photo-of-a-boy-in-dirty-clothing-with-a-bucket.jpeg?auto=compress&cs=tinysrgb&w=600
+https://images.pexels.com/photos/15842113/pexels-photo-15842113/free-photo-of-a-tribal-village-with-people-standing-near-their-huts-and-a-cow-walking-around-the-village.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+https://images.pexels.com/photos/6949477/pexels-photo-6949477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+https://images.pexels.com/photos/7656745/pexels-photo-7656745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+https://images.pexels.com/photos/6646967/pexels-photo-6646967.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+https://images.pexels.com/photos/3480494/pexels-photo-3480494.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+https://images.pexels.com/photos/4630669/pexels-photo-4630669.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+
+https://images.pexels.com/photos/276259/pexels-photo-276259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+https://images.pexels.com/photos/3228692/pexels-photo-3228692.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+https://images.pexels.com/photos/401213/pexels-photo-401213.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+https://images.pexels.com/photos/1486974/pexels-photo-1486974.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+https://images.pexels.com/photos/3996734/pexels-photo-3996734.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+https://images.pexels.com/photos/461049/pexels-photo-461049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+https://images.pexels.com/photos/4167544/pexels-photo-4167544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
 
 All content and information can be found here:
 https://www.un.org/sustainabledevelopment
 https://sustainabledevelopment.un.org/gsdr2019
 https://sdgs.un.org/gsdr/gsdr2023
+https://unstats.un.org/sdgs/report/2016/
+https://unstats.un.org/sdgs/report/2017/
 https://unstats.un.org/sdgs/report/2018/
 https://unstats.un.org/sdgs/report/2019/
 https://unstats.un.org/sdgs/report/2020/
 https://unstats.un.org/sdgs/report/2021/
 https://unstats.un.org/sdgs/report/2022/
 https://unstats.un.org/sdgs/report/2023/
+
 
 “The content of this publication has not been approved by the United Nations and does not reflect the views of the United Nations or its officials or Member States”.
