@@ -13,7 +13,7 @@ import historyData from "./components/HistoryContent";
 import { motion } from "framer-motion";
 
 import "react-horizontal-scrolling-menu/dist/styles.css";
-import './App.css';
+import "./App.css";
 
 import {
   FaGlobeAmericas,
@@ -85,22 +85,25 @@ function App() {
       </div>
 
       <Carousel />
-      <Header title = "HISTORY"
-              description = "The 2030 Agenda for Sustainable Development, adopted by all United Nations Member States in 2015, provides a shared blueprint for peace and prosperity for people and the planet, now and into the future."/>
+      <Header
+        title="HISTORY"
+        description="The 2030 Agenda for Sustainable Development, adopted by all United Nations Member States in 2015, provides a shared blueprint for peace and prosperity for people and the planet, now and into the future."
+      />
 
-    <div className="history"> 
-      {historyData.map(historyData=> (
-        <HistoryCard
-          image = {historyData.image}
-          title = {historyData.title}
-          description = {historyData.description}
-        />
-      ))}
-    </div>
-    
-    <Header title = "PROGRESS REPORTS"
-              description = "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."/>
-      
+      <div className="history">
+        {historyData.map((historyData) => (
+          <HistoryCard
+            image={historyData.image}
+            title={historyData.title}
+            description={historyData.description}
+          />
+        ))}
+      </div>
+
+      <Header
+        title="PROGRESS REPORTS"
+        description="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
+      />
 
       {/*Development Report*/}
       {/* <h1 className="title">Development Reports</h1>

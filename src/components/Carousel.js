@@ -110,15 +110,13 @@ const Carousel = () => {
         {page}
       </div>
       <div className="title" ref={hiddenElementRef}>
-        <h3>TARGETS</h3>
+        <h3>targets</h3>
       </div>
       <div className="button-container">
         <button onClick={handlePrev}>
           <IoIosArrowRoundBack size="25px" />
-          <span>PREV</span> 
         </button>
-        <button onClick={handleNext}>
-          <span>NEXT</span>  <IoIosArrowRoundForward size="25px" />
+        <button onClick={handleNext}><IoIosArrowRoundForward size="25px" />
         </button>
       </div>
       <div className="content-container">

@@ -44,7 +44,7 @@ const ScrollingText = ({ hoveredIndex }) => {
 
   return (
     <div
-      className="wrapper"
+      className={hoveredIndex === -1 ? "wrapper" : "wrapper active"}
       style={{ backgroundColor: `var(${getPageColor(hoveredIndex + 1)})` }}
     >
       <div className={hoveredIndex === -1 ? "marquee" : "marquee active"}>
