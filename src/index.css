@@ -103,6 +103,9 @@ body {
   width: 100%;
   overflow: hidden;
   margin-top: 40px;
+  display: table;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
   /* border: 1px solid black; */
 }
 
@@ -110,14 +113,21 @@ body {
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
+  vertical-align: middle;
   animation: marquee 90s linear infinite;
 }
 
 .marquee p {
+  margin-top: 10px;
   display: inline-block;
   font-size: 3.5rem;
   font-weight: 800;
+  transition: all 0.2s ease-in-out;
   color: #545F71;
+}
+
+.marquee.active p {
+  color: white;
 }
 
 @keyframes marquee {

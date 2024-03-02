@@ -60,7 +60,7 @@ function App() {
     <>
       <Navbar />
 
-      <ScrollingText />
+      <ScrollingText hoveredIndex={hoveredIndex} />
 
       <div className="gallery">
         {squarePaths.map((image, index) => (
