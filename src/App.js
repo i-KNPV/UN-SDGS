@@ -6,14 +6,15 @@ import ScrollingText from "./components/ScrollingText";
 import Carousel from "./components/Carousel";
 import Example from "./components/Card";
 import Logo from "./components/Logo";
+import Header from "./components/Header";
+import HistoryCard from "./components/HistoryCard";
+import historyData from "./components/HistoryContent";
+
 import { motion } from "framer-motion";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
+
 import "react-horizontal-scrolling-menu/dist/styles.css";
-import "./App.css";
+import './App.css';
+
 import {
   FaGlobeAmericas,
   FaHandshake,
@@ -84,129 +85,25 @@ function App() {
       </div>
 
       <Carousel />
+      <Header title = "HISTORY"
+              description = "The 2030 Agenda for Sustainable Development, adopted by all United Nations Member States in 2015, provides a shared blueprint for peace and prosperity for people and the planet, now and into the future."/>
 
-      <h1 className="title">History</h1>
-      <div className="history">
-        <VerticalTimeline lineColor="#000">
-          <VerticalTimelineElement
-            className="tracker"
-            iconStyle={{ background: "#808080", color: "#fff" }}
-            icon={<FaGlobeAmericas />}
-            date="1992"
-            dateClassName="date"
-          >
-            <img
-              src={require("./assets/images/pic3.jpg")}
-              alt="development2"
-              className="history-image"
-            ></img>
-            <p id="content">
-              In June 1992, at the Earth Summit in Rio de Janeiro, Brazil, more
-              than 178 countries adopted Agenda 21, a comprehensive plan of
-              action to build a global partnership for sustainable development
-              to improve human lives and protect the environment
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="tracker"
-            iconStyle={{ background: "#808080", color: "#fff" }}
-            icon={<FaHandshake />}
-            date="2000"
-            dateClassName="date"
-          >
-            <img
-              src={require("./assets/images/pic4.jpg")}
-              alt="development2"
-              className="history-image"
-            ></img>
-            <p id="content">
-              Member States unanimously adopted the Millennium Declaration at
-              the Millennium Summit in September 2000 at UN Headquarters in New
-              York.
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="tracker"
-            iconStyle={{ background: "#808080", color: "#fff" }}
-            icon={<FaMonument />}
-            date="2012"
-            dateClassName="date"
-          >
-            <img
-              src={require("./assets/images/pic5.jpg")}
-              alt="development2"
-              className="history-image"
-            ></img>
-
-            <p id="content">
-              In Rio de Janeiro, Brazil, Member States adopted the outcome
-              document "The Future We Want" in which they decided, inter alia,
-              to launch a process to develop a set of SDGs to build upon the
-              MDGs and to establish the UN High-level Political Forum on
-              Sustainable Development.
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="tracker"
-            iconStyle={{ background: "#808080", color: "#fff" }}
-            icon={<FaProjectDiagram />}
-            date="2013"
-            dateClassName="date"
-          >
-            <img
-              src={require("./assets/images/pic6.jpg")}
-              alt="development2"
-              className="history-image"
-            ></img>
-
-            <p id="content">
-              The General Assembly set up a 30-member Open Working Group to
-              develop a proposal on the SDGs.
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="tracker"
-            iconStyle={{ background: "#808080", color: "#fff" }}
-            icon={<FaFileContract />}
-            date=" January 2015"
-            dateClassName="date"
-          >
-            <img
-              src={require("./assets/images/pic7.jpg")}
-              alt="development2"
-              className="history-image"
-            ></img>
-            <p id="content">
-              In January 2015, the General Assembly began the negotiation
-              process on the post-2015 development agenda. 2015 was a landmark
-              year for multilateralism and international policy shaping, with
-              the adoption of several major agreements.
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="tracker"
-            iconStyle={{ background: "#808080", color: "#fff" }}
-            icon={<FaHandsHelping />}
-            date=" September 2015"
-            dateClassName="date"
-          >
-            <img
-              src={require("./assets/images/pic8.jpg")}
-              alt="development2"
-              className="history-last-image"
-            ></img>
-
-            <p id="content">
-              The process culminated in the subsequent adoption of the 2030
-              Agenda for Sustainable Development, with 17 SDGs at its core, at
-              the UN Sustainable Development Summit in September 2015.
-            </p>
-          </VerticalTimelineElement>
-        </VerticalTimeline>
-      </div>
+    <div className="history"> 
+      {historyData.map(historyData=> (
+        <HistoryCard
+          image = {historyData.image}
+          title = {historyData.title}
+          description = {historyData.description}
+        />
+      ))}
+    </div>
+    
+    <Header title = "PROGRESS REPORTS"
+              description = "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."/>
+      
 
       {/*Development Report*/}
-      <h1 className="title">Development Reports</h1>
+      {/* <h1 className="title">Development Reports</h1>
       <div className="development-report">
         <div className="report" id="report1">
           <div className="report-card">
@@ -251,10 +148,10 @@ function App() {
             <button className="card-button"> Learn More </button>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/*Progress Report*/}
-      <h1 className="title">Progress Reports</h1>
+      {/* <h1 className="title">Progress Reports</h1>
       <div className="set-one">
         <div className="progress">
           <div className="card">
@@ -341,7 +238,7 @@ function App() {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* resources */}
       <div className="resources">
         <h1 className="title">Resources</h1>

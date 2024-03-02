@@ -91,7 +91,8 @@ body {
   margin-left: auto;
   display: flex;
   gap: 2rem;
-}
+} 
+
 
 .navbar a {
   text-decoration: none;
@@ -535,4 +536,98 @@ section {
   100% {
     transform: translate(-100%);
   }
+}
+
+/*HEADER STYLE*/
+.header {
+  background-color: white;
+  color: #333333;
+  text-align: center;
+  margin-top: -100px;
+  height: 200px;
+  display: grid;
+  place-items: center;
+}
+
+.header-title {
+  text-align: center;
+  font-family: 'Helvetica';
+  font-size: 3vw;
+  margin-bottom: 10px;
+}
+
+.header-description{
+  margin-top: 10px;
+  font-family: 'Helvetica';
+  font-size: medium;
+  margin-left: 100px;
+  margin-right: 100px;
+  font-size: 1vw;
+}
+
+
+/*HISTORY CARDS DESIGN*/
+/*https://www.youtube.com/watch?v=yfg9ChTmuKM*/
+/*https://www.youtube.com/watch?v=tF3RE5CGt9U&t=381s*/
+
+.history {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin-bottom: 100px;
+}
+
+.historycard {
+  position: relative;
+  
+}
+
+.history-image{
+  display:block;
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
+  height: auto;
+  filter: grayscale(1.0);
+}
+
+.history-content{
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  right:0;
+  background-color: rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  width: 100%;
+  transition: 0.3s ease-in;
+  height: 0;
+}
+
+.historycard:hover .history-content{
+  height: 100%;
+}
+
+.historycard:hover .history-image{
+  filter: none;
+}
+
+
+.history-title{
+  width: 100%;
+  margin-top: 10%;
+  color: white; 
+  font-size: 4vw;
+  position: absolute;
+  text-align: center;
+  font-family: "Helvetica";
+}
+
+.history-description{
+  text-align: center;
+  font-family: "Helvetica";
+  color: white;
+  font-size: 1vw;
+  margin: 40% 0 0 15%;
+  width: 70%;
+  line-height: 1.5em;
 }
