@@ -2,7 +2,7 @@ const progressData = [
 
     {
         image: "https://images.pexels.com/photos/276259/pexels-photo-276259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        title: "Transformative Vision",
+        title: "Vision for world",
         date: "REPORT 2016",
         author: "Ban Ki-Moon",
         description: "This agenda is a road map for people and the planet that will build on the success of the Millennium Development Goals and ensure sustainable social and economic progress worldwide. It seeks not only to eradicate extreme poverty, but also to integrate and balance the three dimensions of sustainable development—economic, social and environmental—in a comprehensive global vision."
@@ -11,7 +11,7 @@ const progressData = [
     
     {
         image: "https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        title: "Build lives of Dignity ",
+        title: "Build lives",
         date: "REPORT 2017",
         author: "António Guterres",
         description: "Implementation has begun, but the clock is ticking. This report shows that the rate of progress in many areas is far slower than needed to meet the targets by 2030. Focused actions are needed to lift the 767 million people who still live on less than 1.90 US dollars a day, and to ensure food security for the 793 million people who routinely confront hunger.", 

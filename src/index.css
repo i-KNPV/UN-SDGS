@@ -591,6 +591,8 @@ section {
   font-family: 'Helvetica';
   font-size: 3vw;
   margin-bottom: 10px;
+  font-family: 'AvenueMono';
+  text-transform: lowercase;
 }
 
 .header-description{
@@ -608,9 +610,14 @@ section {
 /*https://www.youtube.com/watch?v=tF3RE5CGt9U&t=381s*/
 
 .history {
-  display: grid;
+  display:inline-grid;
   grid-template-columns: auto auto auto auto;
-  margin-bottom: 100px;
+  align-items: center;
+  justify-items: center;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 150px;
 }
 
 .historycard {
@@ -638,6 +645,7 @@ section {
   width: 100%;
   transition: 0.3s ease-in;
   height: 0;
+  font-family: 'Helvetica';
 }
 
 .historycard:hover .history-content{
@@ -645,7 +653,7 @@ section {
 }
 
 .historycard:hover .history-image{
-  filter: none;
+  filter: brightness(65%);
 }
 
 
@@ -656,17 +664,19 @@ section {
   font-size: 4vw;
   position: absolute;
   text-align: center;
-  font-family: "Helvetica";
+  font-family: 'AvenueMono';
+  text-transform: lowercase;
 }
 
 .history-description{
-  text-align: center;
+  text-align: justify;
   font-family: "Helvetica";
   color: white;
   font-size: 1vw;
   margin: 40% 0 0 15%;
   width: 70%;
   line-height: 1.5em;
+  font-family: 'Helvetica';
 }
 
 /*PROGRESS CARDS*/
@@ -677,11 +687,12 @@ section {
   align-items: center;
   justify-items: center;
   margin-left: 10%;
-  margin-top: 20px;
+  margin-top: 50px;
+  margin-bottom: 5%;
 }
 
 .progresscard{
-  width: 300px; /*adjust to a responsive size*/
+  width: 300px; 
   overflow: hidden;
   height: 500px;
   display: flex;
@@ -706,7 +717,7 @@ section {
 }
 .progress-image{
   overflow: hidden;
-  height:150px; /*adjust to a responsive size*/
+  height:150px; 
   width: 100%;
   filter: grayscale(0.5);
 }
@@ -733,9 +744,10 @@ section {
   margin-bottom: 0.5rem;
   font-size: 25px;
   margin-left: 10px;
-  font-family: "Helvetica";
   color:#333333;
   font-weight: bold;
+  font-family: 'AvenueMono';
+  text-transform: lowercase;
 }
 
 .progress-author{
@@ -766,7 +778,8 @@ section {
   color: black;
   text-decoration: none;
   font-weight: bold;
-  font-family: "Helvetica";
+  font-family: 'AvenueMono';
+  text-transform: lowercase;
 }
 
 .button-label:hover{

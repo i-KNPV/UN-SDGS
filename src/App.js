@@ -17,16 +17,6 @@ import { motion } from "framer-motion";
 import "react-horizontal-scrolling-menu/dist/styles.css";
 import "./App.css";
 
-import {
-  FaGlobeAmericas,
-  FaHandshake,
-  FaMonument,
-  FaProjectDiagram,
-  FaFileContract,
-  FaHandsHelping,
-  FaExternalLinkSquareAlt,
-} from "react-icons/fa";
-
 function importAll(r) {
   let images = {};
   r.keys().forEach((key, index) => {
@@ -93,6 +83,7 @@ function App() {
         description="The 2030 Agenda for Sustainable Development, adopted by all United Nations Member States in 2015, provides a shared blueprint for peace and prosperity for people and the planet, now and into the future."
       />
 
+      {/*History Part*/}
       <div className="history">
         {historyData.map((historyData) => (
           <HistoryCard
@@ -102,7 +93,8 @@ function App() {
           />
         ))}
       </div>
-
+      
+      {/*Progress Part*/}
       <Header
         title="PROGRESS REPORTS"
         description="Every year, the UN Secretary General presents an annual SDG Progress report, which is developed in cooperation with the UN System."

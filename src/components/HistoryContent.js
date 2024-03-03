@@ -4,7 +4,7 @@ const historyData = [
 {
     image: "https://images.pexels.com/photos/15517285/pexels-photo-15517285/free-photo-of-a-boy-in-dirty-clothing-with-a-bucket.jpeg?auto=compress&cs=tinysrgb&w=600",
     title: "1992",
-    description: "In June 1992, at the Earth Summit in Rio de Janeiro, Brazil, more than 178 countries adopted Agenda 21, a comprehensive plan o action to build a global partnership for sustainable development to improve human lives and protect the environment", 
+    description: "In June 1992, at the Earth Summit in Rio de Janeiro, Brazil, more than 178 countries adopted Agenda 21, a comprehensive plan of action to build a global partnership for sustainable development to improve human lives and protect the environment", 
 },
 
 {
@@ -48,7 +48,7 @@ const historyData = [
 {
     image: "https://images.pexels.com/photos/4630669/pexels-photo-4630669.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     title: "TODAY",
-    description: "The Division for Sustainable Development Goals (DSDG) in the UNDESA provides substantive support and capacity-building for the SDGs and their related thematic issues, the Global Sustainable Development Report (GSDR), partnerships and Small Island Developing States", 
+    description: "The DSDG in the UNDESA provides substantive support and capacity-building for the SDGs and their related thematic issues, the Global Sustainable Development Report (GSDR), partnerships and Small Island Developing States", 
 
 },
 
