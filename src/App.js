@@ -51,6 +51,7 @@ const logos = [
   "https://1000logos.net/wp-content/uploads/2021/05/Jollibee-logo.png",
   "https://1000logos.net/wp-content/uploads/2020/09/Mondelez-Logo.png",
   "https://1000logos.net/wp-content/uploads/2017/03/Nestle-Logo-2015.png",
+  "https://logolook.net/wp-content/uploads/2023/09/UNICEF-Logo.png"
 ].map((image) => ({
   id: crypto.randomUUID(),
   image,
@@ -120,12 +121,10 @@ function App() {
       </div>
 
       {/* resources */}
-      <div className="resources">
-        <h1 className="title">Resources</h1>
+      <h3 className="header-title">Gallery</h3>
         <Example />
-      </div>
       <div className="partner">
-        <h1 className="title">Partnered Organizations</h1>
+      <h3 className="header-title">Partnered Organizations</h3>
         <Logo images={logos} speed={5000} />
       </div>
       <Footer />
