@@ -113,7 +113,10 @@ function App() {
       </div>
 
       {/* resources */}
-      <h3 className="header-title">Gallery</h3>
+      <Header
+        title="Gallery"
+        description="Hover to see the SDG Conferences through the years."
+      />
         <Example />
       <div className="partner">
       <h3 className="header-title">Partnered Organizations</h3>
