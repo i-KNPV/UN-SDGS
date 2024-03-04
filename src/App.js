@@ -41,7 +41,7 @@ const logos = [
   "https://1000logos.net/wp-content/uploads/2021/05/Jollibee-logo.png",
   "https://1000logos.net/wp-content/uploads/2020/09/Mondelez-Logo.png",
   "https://1000logos.net/wp-content/uploads/2017/03/Nestle-Logo-2015.png",
-  "https://logolook.net/wp-content/uploads/2023/09/UNICEF-Logo.png"
+  "https://logolook.net/wp-content/uploads/2023/09/UNICEF-Logo.png",
 ].map((image) => ({
   id: crypto.randomUUID(),
   image,
@@ -53,9 +53,7 @@ function App() {
   return (
     <>
       <Navbar />
-
       <ScrollingText hoveredIndex={hoveredIndex} />
-
       <div className="gallery">
         {squarePaths.map((image, index) => (
           <motion.div
@@ -76,13 +74,11 @@ function App() {
           </motion.div>
         ))}
       </div>
-
       <Carousel />
       <Header
         title="HISTORY"
         description="The 2030 Agenda for Sustainable Development, adopted by all United Nations Member States in 2015, provides a shared blueprint for peace and prosperity for people and the planet, now and into the future."
       />
-
       {/*History Part*/}
       <div className="history">
         {historyData.map((historyData) => (
@@ -93,33 +89,33 @@ function App() {
           />
         ))}
       </div>
-      
       {/*Progress Part*/}
       <Header
         title="PROGRESS REPORTS"
         description="Every year, the UN Secretary General presents an annual SDG Progress report, which is developed in cooperation with the UN System."
       />
-
-      <div className="progress">
-        {progressData.map((progressData) => (
-          <ProgressCard
-            image={progressData.image}
-            title={progressData.title}
-            date = {progressData.date}
-            author = {progressData.author}
-            description={progressData.description}
-          />
-        ))}
+      <div className="progress-container">
+        <div className="progress">
+          {progressData.map((progressData) => (
+            <ProgressCard
+              image={progressData.image}
+              title={progressData.title}
+              date={progressData.date}
+              author={progressData.author}
+              description={progressData.description}
+            />
+          ))}
+        </div>
       </div>
-
+    
       {/* resources */}
       <Header
         title="Gallery"
         description="Hover to see the SDG Conferences through the years."
       />
-        <Example />
+      <Example />
       <div className="partner">
-      <h3 className="header-title">Partnered Organizations</h3>
+        <h3 className="header-title">Partnered Organizations</h3>
         <Logo images={logos} speed={5000} />
       </div>
       <Footer />

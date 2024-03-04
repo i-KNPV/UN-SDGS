@@ -37,9 +37,7 @@ export const Example = () => {
         "https://lh3.googleusercontent.com/pw/AP1GczOba1p6oy1gh_5EerGGUnwM5n0itiaorN2GO2WeVPi3LBMac1G7wO1lzmS-LHcQn9ArePyad1AV7hdOa2WwMCwH4NmiSrMNLfl9U6zwghLwiZQhdsUlIQOwQ-Vssx-DvsBmuRg2P81Wl3jUsrRw4WFc=w1478-h1010-s-no?authuser=0",
       ]}
     >
-      <section className="h-screen">
-      </section>
-
+      <section className="h-screen"></section>
     </MouseImageTrail>
   );
 };
@@ -133,7 +131,7 @@ const MouseImageTrail = ({
   return (
     <div
       ref={scope}
-      className="relative overflow-hidden"
+      className="relative overflow-hidden bg-gray-300"
       onMouseMove={handleMouseMove}
     >
       {children}
