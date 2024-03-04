@@ -1,5 +1,8 @@
-Navbar component
-https://ui.shadcn.com/docs/components/navigation-menu
+Scrolling text:
+https://stackoverflow.com/questions/45847392/pure-css-continuous-horizontal-text-scroll-without-break
+
+Hover card effect:
+www.hover.dev/components/cards#hover-tilt-card
 
 Images can be found here:
 
